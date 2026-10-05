@@ -1,1 +1,0 @@
-# multiscreen-mobile-app
