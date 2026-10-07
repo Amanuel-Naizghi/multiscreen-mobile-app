@@ -1,28 +1,24 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-type JobCardProps = {
+type MyJobCardProps = {
   title: string;
   company: string;
-  location: string;
-  salary?: string;
+  status: string;
 };
 
-export default function JobCard({
+export default function MyJobCard({
   title,
   company,
-  location,
-  salary,
-}: JobCardProps) {
+  status,
+}: MyJobCardProps) {
   return (
-    <Pressable style={styles.card}>
+    <View style={styles.card}>
       <Text style={styles.title}>{title}</Text>
 
       <Text style={styles.company}>{company}</Text>
 
-      <Text style={styles.location}>{location}</Text>
-
-      {salary && <Text style={styles.salary}>{salary}</Text>}
-    </Pressable>
+      <Text style={styles.status}>{status}</Text>
+    </View>
   );
 }
 
@@ -46,14 +42,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 
-  location: {
-    marginTop: 4,
+  status: {
+    marginTop: 10,
     fontSize: 14,
-  },
-
-  salary: {
-    marginTop: 6,
-    fontSize: 14,
-    fontWeight: '500',
+    fontWeight: '600',
   },
 });
