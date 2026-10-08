@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, Image } from 'react-native';
 
 export default function ProfileScreen() {
   return (
@@ -8,7 +8,11 @@ export default function ProfileScreen() {
     >
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Profile</Text>
-        <Text style={styles.menu}>☰</Text>
+        <Image
+          source={require('../../assets/myMenu.png')}
+          style={styles.menu}
+          resizeMode="contain"
+        />
       </View>
 
       <View style={styles.avatar}>
@@ -22,15 +26,23 @@ export default function ProfileScreen() {
       <Text style={styles.location}>Calgary, AB</Text>
 
       <Text style={styles.contact}>
-        587-837-3383 • amanu...@gmail.com
+        587-***-****  amanu...@gmail.com
       </Text>
 
       <View style={styles.visibility}>
-        <Text style={styles.visibilityIcon}>●</Text>
+        <Image
+          source={require('../../assets/see.png')}
+          style={styles.visibilityIcon}
+          resizeMode="contain"
+        />
         <Text style={styles.visibilityText}>
           Employers can find you
         </Text>
-        <Text style={styles.arrow}>⌄</Text>
+        <Image
+          source={require('../../assets/down.png')}
+          style={styles.arrow}
+          resizeMode="contain"
+        />
       </View>
 
       <View style={styles.tabs}>
@@ -53,7 +65,7 @@ export default function ProfileScreen() {
             <Text style={styles.resumeDate}>May 23</Text>
           </View>
 
-          <Text style={styles.more}>•••</Text>
+          <Text style={styles.more}>...</Text>
         </View>
 
         <View style={styles.resumePreview}>
@@ -70,8 +82,8 @@ export default function ProfileScreen() {
           </Text>
 
           <Text style={styles.previewText}>
-            Reliable IT and accounting professional with
-            experience in system administration and accounting.
+            Reliable Software Developer professional with
+            experience in system design and development.
           </Text>
         </View>
       </View>
@@ -98,6 +110,7 @@ const styles = StyleSheet.create({
   },
 
   headerTitle: {
+    marginTop: 20,
     fontSize: 26,
     fontWeight: '700',
   },
@@ -105,7 +118,9 @@ const styles = StyleSheet.create({
   menu: {
     position: 'absolute',
     right: 20,
-    fontSize: 30,
+    top: 30,
+    width: 30,
+    height: 30,
   },
 
   avatar: {
@@ -164,9 +179,9 @@ const styles = StyleSheet.create({
   },
 
   visibilityIcon: {
-    fontSize: 16,
+    width: 16,
+    height: 16,
     marginRight: 10,
-    color: '#287a38',
   },
 
   visibilityText: {
@@ -177,8 +192,9 @@ const styles = StyleSheet.create({
   },
 
   arrow: {
-    fontSize: 24,
-    color: '#287a38',
+    width: 16,
+    height: 16,
+    marginLeft: 10,
   },
 
   tabs: {

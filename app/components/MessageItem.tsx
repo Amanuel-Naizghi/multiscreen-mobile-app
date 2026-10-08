@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 type MessageItemProps = {
   sender: string;
@@ -14,7 +14,11 @@ export default function MessageItem({
   return (
     <View style={styles.container}>
       <View style={styles.icon}>
-        <Text style={styles.iconText}>▦</Text>
+        <Image
+          source={require('../../assets/company.png')}
+          style={styles.companyIcon}
+          resizeMode="contain"
+        />
       </View>
 
       <View style={styles.message}>
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
     width: 64,
     height: 64,
     borderRadius: 14,
-    backgroundColor: '#3b8f7a',
+    backgroundColor: '#eaeaea',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -60,6 +64,10 @@ const styles = StyleSheet.create({
   iconText: {
     color: '#ffffff',
     fontSize: 30,
+  },
+  companyIcon: {
+    width: 40,
+    height: 40,
   },
 
   message: {
