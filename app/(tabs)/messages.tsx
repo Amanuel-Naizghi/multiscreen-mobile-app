@@ -31,9 +31,9 @@ const styles = StyleSheet.create({
   },
 
   heading: {
-    fontSize: 32,
+    fontSize: 25,
     fontWeight: '700',
-    marginTop: 16,
+    marginTop: 25,
     marginBottom: 10,
   },
 });
