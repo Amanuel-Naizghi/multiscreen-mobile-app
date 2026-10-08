@@ -14,7 +14,7 @@ export default function HomeStackLayout() {
       <Stack.Screen
         name="[id]"
         options={{
-          headerShown: true,
+          headerShown: false,
           title: 'Job Details',
         }}
       />
